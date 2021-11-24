@@ -394,7 +394,7 @@
         PHlj3OW+arEGAAAA5mGz+QdheTXLp13zzAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+  <data name="Role.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Roboto'; font-size: 8pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(105, 105, 105); text-align: left; }</value>
   </data>
   <data name="Username.BaseStylesheet" xml:space="preserve">
@@ -403,7 +403,7 @@
   <data name="Profile_Picture.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6CAYAAACI7Fo9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAACTtJREFUeF7t3e2rHOUZwOH+0/1QKCQQaECIkEIk0oABAwGhLSXxrbVRRONLEb+3
+        DgAACw4BQL7hQQAACTtJREFUeF7t3e2rHOUZwOH+0/1QKCQQaECIkEIk0oABAwGhLSXxrbVRRONLEb+3
         PYlJzIv9J7bnPrpwPLn3fXZ35r6vD9cn0Wx2np/P7DPPzPzmL//7fgbUJnRoQOjQgNChAaFDA0KHBoQO
         DQgdGhA6NCB0aEDo0IDQoQGhQwNChwaEDg0IHRoQOjQgdGhA6NCA0KEBoUMDQocGhA4NCB0aEDo0IHRo
         QOjQgNChAaFDA0KHBoQODQgdGhA6NCB0aEDo0IDQoQGhQwNChwaEDg0IHRoQOjQgdGhA6NCA0KEBoUMD
@@ -515,7 +515,13 @@
         drvd/3G/3gAAAKHH4xvArcV8yHwsSwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Login.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Selected_ID.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Roboto'; font-size: 10pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 128); text-align: left; }</value>
+  </data>
+  <data name="Selected_Name.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Roboto'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 128); text-align: left; }</value>
+  </data>
+  <data name="Select.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALAAAAAoCAYAAABegnBwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACZSURBVHhe7dIxDYAwAADBigZZFVSQgQAIOwL45Iabfv2x

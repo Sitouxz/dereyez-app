@@ -11,10 +11,10 @@ using MySql.Data.MySqlClient;
 
 namespace Dereyez_App
 {
-    public partial class OrderHistory : Form
+    public partial class OrderHistoryForm : Form
     {
         string myConnection = "datasource=localhost; port=3306; username=root; password=";
-        public OrderHistory()
+        public OrderHistoryForm()
         {
             InitializeComponent();
             LoadTable();

@@ -84,7 +84,6 @@ C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez App.pdb
 C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.Main.resources
 C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.Dashboard.resources
 C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.ItemDetails.resources
-C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.OrderHistory.resources
 C:\Users\user\source\repos\Dereyez App\Dereyez App\bin\Debug\MySql.Data.dll
 C:\Users\user\source\repos\Dereyez App\Dereyez App\bin\Debug\MySql.Data.xml
 C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.LoginForm.resources
@@ -92,3 +91,4 @@ C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.Registe
 C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.CheckoutForm.resources
 C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.OrdersForm.resources
 C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.OrderListForm.resources
+C:\Users\user\source\repos\Dereyez App\Dereyez App\obj\Debug\Dereyez_App.OrderHistoryForm.resources

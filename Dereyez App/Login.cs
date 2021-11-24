@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Dereyez_App
 {
@@ -18,9 +19,34 @@ namespace Dereyez_App
         {
             InitializeComponent();
         }
+        public string picturePath, username, role;
+        public int id;
 
+        void openMainForm()
+        {
+            this.Hide();
+            Main ins = new Main();
+            ins.connectedUserId = Convert.ToInt32(id);
+            if (picturePath != null)
+            {
+                Image setPicture = Image.FromFile(@"C:\Users\user\source\repos\Dereyez App\Dereyez App\profile-pictures\" + picturePath);
+                ins.Profile_Picture.Image = setPicture;
+            }
+            ins.Username.Text = username;
+            ins.Role.Text = role;
+            if (role == "admin")
+            {
+                ins.Home.Text = "Dashboard";
+                ins.Orders.Text = "Order List";
+                ins.Checkout.Text = "Order History";
+            }
+            ins.Closed += (s, args) => this.Close();
+            ins.Show();
+        }
         private void Login_Click(object sender, EventArgs e)
         {
+
+
             try
             {
                 DateTime lastSeen = DateTime.Now;
@@ -32,30 +58,26 @@ namespace Dereyez_App
 
                 myReader = SelectCommand.ExecuteReader();
                 int count = 0;
-                bool isAdmin = false;
                 while (myReader.Read())
                 {
                     count = count + 1;
-                    if (myReader.GetString("userLevel") == "admin")
-                    {
-                        isAdmin = true;
-                    }
                 }
-                if (isAdmin == true)
-                {
-                    Main ins = new Main();
-                    ins.connectedUserId = Convert.ToInt32(myReader.GetString("userId"));
-                    ins.
-                    ins.Closed += (s, args) => this.Close();
-                    ins.Show();
 
+                if (myReader.GetString("picture") != "")
+                {
+                    picturePath = myReader.GetString("picture");
+                }
+                id = myReader.GetInt32("userId");
+                username = myReader.GetString("username");
+                role = myReader.GetString("userLevel");
+
+                if (myReader.GetString("userlevel") == "admin")
+                {
+                    openMainForm();
                 }
                 else if (count == 1)
                 {
-                    this.Hide();
-                    Main ins = new Main();
-                    ins.Closed += (s, args) => this.Close();
-                    ins.Show();
+                    openMainForm();
                 }
                 else
                 {

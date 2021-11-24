@@ -120,67 +120,22 @@
   <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Roboto'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(64, 64, 64); text-align: left; }</value>
   </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+  <data name="Item_Name.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Roboto'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(64, 64, 64); text-align: left; }</value>
   </data>
-  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+  <data name="Item_ID.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Roboto'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(64, 64, 64); text-align: left; }</value>
   </data>
   <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Roboto'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(64, 64, 64); text-align: left; }</value>
   </data>
-  <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
+  <data name="Item_Desc.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Roboto'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(64, 64, 64); text-align: left; }</value>
   </data>
-  <data name="bunifuLabel5.Text" xml:space="preserve">
+  <data name="Item_Desc.Text" xml:space="preserve">
     <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
   <data name="bunifuButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPoAAAAoCAYAAADXGucZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

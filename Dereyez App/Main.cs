@@ -71,18 +71,40 @@ namespace Dereyez_App
 
         private void Home_Click(object sender, EventArgs e)
         {
-            if (activeForm != null)
+            if (Role.Text == "admin")
+            {
+                openChildForm(new Dashboard());
+            }
+            else if (activeForm != null)
+            {
                 activeForm.Close();
+            }
+
         }
 
         private void Orders_Click(object sender, EventArgs e)
         {
-            openChildForm(new OrdersForm());
+            if (Orders.Text == "Order List")
+            {
+                openChildForm(new OrderListForm());
+            }
+            else
+            {
+                openChildForm(new OrdersForm());
+            }
         }
 
         private void Checkout_Click(object sender, EventArgs e)
         {
-            openChildForm(new CheckoutForm());
+            if (Checkout.Text == "Order History")
+            {
+                openChildForm(new OrderHistoryForm());
+            }
+            else
+            {
+                openChildForm(new CheckoutForm());
+
+            }
         }
 
         string file;
@@ -95,24 +117,62 @@ namespace Dereyez_App
                 file = open.FileName;
                 Profile_Picture.Image = new Bitmap(open.FileName);
                 File.Copy(file, Path.Combine(@"C:\Users\user\source\repos\Dereyez App\Dereyez App\profile-pictures\", Path.GetFileName(file)), true);
+
+                string Query = "update dereyez.users set picture= '" + Convert.ToString(Path.GetFileName(file)) + "' where userId = '" + connectedUserId + "';";
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+                MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
+                MySqlDataReader myReader;
+
+                try
+                {
+                    myConn.Open();
+                    myReader = cmdDatabase.ExecuteReader();
+                    myConn.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+        }
 
-            string Query = "update dereyez.users set picture= '" + file + "' where username = '" + this.Username.Text + "';";
-            MySqlConnection myConn = new MySqlConnection(myConnection);
-            MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
-            MySqlDataReader myReader;
-
-            try
+        private void Main_Load(object sender, EventArgs e)
+        {
+            if (Role.Text == "admin")
             {
-                myConn.Open();
-                myReader = cmdDatabase.ExecuteReader();
-                myConn.Close();
+                openChildForm(new Dashboard());
+            }
+        }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+        string desc;
+        private void Select_Click(object sender, EventArgs e)
+        {
+            ItemDetails sendItemId = new ItemDetails();
+            sendItemId.Item_ID.Text = Selected_ID.Text;
+            sendItemId.Item_Name.Text = Selected_Name.Text;
+            sendItemId.Item_Desc.Text = desc;
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = sendItemId;
+            sendItemId.TopLevel = false;
+            sendItemId.FormBorderStyle = FormBorderStyle.None;
+            sendItemId.Dock = DockStyle.Right;
+            Panel_ChildForm.Controls.Add(sendItemId);
+            Panel_ChildForm.Dock = DockStyle.Right;
+            Panel_ChildForm.Controls.Add(sendItemId);
+            Panel_ChildForm.Tag = sendItemId;
+            sendItemId.BringToFront();
+            sendItemId.Show();
+        }
+
+        private void Table_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.Table.Rows[e.RowIndex];
+
+            Selected_ID.Text = row.Cells["itemId"].Value.ToString();
+            Selected_Name.Text = row.Cells["name"].Value.ToString();
+            desc = row.Cells["description"].Value.ToString();
         }
     }
 }
