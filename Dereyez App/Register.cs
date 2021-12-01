@@ -54,7 +54,7 @@ namespace Dereyez_App
         private void Login_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegisterForm ins = new RegisterForm();
+            LoginForm ins = new LoginForm();
             ins.Closed += (s, args) => this.Close();
             ins.Show();
         }

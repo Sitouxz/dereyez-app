@@ -26,8 +26,8 @@ namespace Dereyez_App
         private void LoadRecentOrders()
         {
             MySqlConnection myConn = new MySqlConnection(myConnection);
-            MySqlCommand cmdDatabase = new MySqlCommand("select * from dereyez.orderdetails;", myConn);
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM dereyez.orderdetails", myConn);
+            MySqlCommand cmdDatabase = new MySqlCommand("select * from dereyez.orders;", myConn);
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM dereyez.orders", myConn);
             myConn.Open();
             Int32 count = Convert.ToInt32(cmd.ExecuteScalar());
             myConn.Close();

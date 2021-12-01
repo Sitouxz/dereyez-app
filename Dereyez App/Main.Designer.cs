@@ -52,10 +52,10 @@
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.Panel_ChildForm = new Bunifu.UI.WinForms.BunifuPanel();
+            this.Selected_ID = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Selected_Name = new Bunifu.UI.WinForms.BunifuLabel();
             this.Select = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.Table = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.Selected_Name = new Bunifu.UI.WinForms.BunifuLabel();
-            this.Selected_ID = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Profile_Picture)).BeginInit();
@@ -598,12 +598,46 @@
             this.Panel_ChildForm.Size = new System.Drawing.Size(800, 625);
             this.Panel_ChildForm.TabIndex = 17;
             // 
+            // Selected_ID
+            // 
+            this.Selected_ID.AllowParentOverrides = false;
+            this.Selected_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Selected_ID.AutoEllipsis = false;
+            this.Selected_ID.CursorType = null;
+            this.Selected_ID.Font = new System.Drawing.Font("Roboto", 10F);
+            this.Selected_ID.ForeColor = System.Drawing.Color.Gray;
+            this.Selected_ID.Location = new System.Drawing.Point(483, 562);
+            this.Selected_ID.Name = "Selected_ID";
+            this.Selected_ID.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Selected_ID.Size = new System.Drawing.Size(4, 17);
+            this.Selected_ID.TabIndex = 15;
+            this.Selected_ID.Text = "-";
+            this.Selected_ID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Selected_ID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // Selected_Name
+            // 
+            this.Selected_Name.AllowParentOverrides = false;
+            this.Selected_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Selected_Name.AutoEllipsis = false;
+            this.Selected_Name.CursorType = null;
+            this.Selected_Name.Font = new System.Drawing.Font("Roboto", 12F);
+            this.Selected_Name.ForeColor = System.Drawing.Color.Gray;
+            this.Selected_Name.Location = new System.Drawing.Point(483, 581);
+            this.Selected_Name.Name = "Selected_Name";
+            this.Selected_Name.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Selected_Name.Size = new System.Drawing.Size(4, 20);
+            this.Selected_Name.TabIndex = 14;
+            this.Selected_Name.Text = "-";
+            this.Selected_Name.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Selected_Name.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // Select
             // 
             this.Select.AllowAnimations = true;
             this.Select.AllowMouseEffects = true;
             this.Select.AllowToggling = false;
-            this.Select.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Select.AnimationSpeed = 200;
             this.Select.AutoGenerateColors = false;
             this.Select.AutoRoundBorders = false;
@@ -700,6 +734,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(228)))), ((int)(((byte)(195)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Table.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Table.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(246)))), ((int)(((byte)(237)))));
             this.Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -770,38 +805,6 @@
             this.Table.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.Table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Table_CellClick);
             // 
-            // Selected_Name
-            // 
-            this.Selected_Name.AllowParentOverrides = false;
-            this.Selected_Name.AutoEllipsis = false;
-            this.Selected_Name.CursorType = null;
-            this.Selected_Name.Font = new System.Drawing.Font("Roboto", 12F);
-            this.Selected_Name.ForeColor = System.Drawing.Color.Gray;
-            this.Selected_Name.Location = new System.Drawing.Point(483, 581);
-            this.Selected_Name.Name = "Selected_Name";
-            this.Selected_Name.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Selected_Name.Size = new System.Drawing.Size(4, 20);
-            this.Selected_Name.TabIndex = 14;
-            this.Selected_Name.Text = "-";
-            this.Selected_Name.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.Selected_Name.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // Selected_ID
-            // 
-            this.Selected_ID.AllowParentOverrides = false;
-            this.Selected_ID.AutoEllipsis = false;
-            this.Selected_ID.CursorType = null;
-            this.Selected_ID.Font = new System.Drawing.Font("Roboto", 10F);
-            this.Selected_ID.ForeColor = System.Drawing.Color.Gray;
-            this.Selected_ID.Location = new System.Drawing.Point(483, 562);
-            this.Selected_ID.Name = "Selected_ID";
-            this.Selected_ID.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Selected_ID.Size = new System.Drawing.Size(4, 17);
-            this.Selected_ID.TabIndex = 15;
-            this.Selected_ID.Text = "-";
-            this.Selected_ID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.Selected_ID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -810,7 +813,6 @@
             this.ClientSize = new System.Drawing.Size(1000, 625);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.Panel_ChildForm);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

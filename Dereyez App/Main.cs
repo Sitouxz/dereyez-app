@@ -152,6 +152,8 @@ namespace Dereyez_App
             sendItemId.Item_ID.Text = Selected_ID.Text;
             sendItemId.Item_Name.Text = Selected_Name.Text;
             sendItemId.Item_Desc.Text = desc;
+            sendItemId.itemId = Convert.ToInt32(Selected_ID.Text);
+            sendItemId.userId = connectedUserId;
             if (activeForm != null)
                 activeForm.Close();
             activeForm = sendItemId;
